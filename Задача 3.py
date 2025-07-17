@@ -8,7 +8,7 @@ class BaseConverter:
             target_scale (str): 'K' - Кельвины, 'F' - Фаренгейты или 'all' (по умолчанию).
 
         Returns:
-            float | dict: Результат в выбранной шкале или словарь с обеими.
+            float | dict: Результат в выбранной шкале или в обеих.
         """
 
         K = celsius + 273.15
@@ -21,5 +21,5 @@ class BaseConverter:
         else:
             return {
                 'Kelvin': round(K, 2),
-                'Fahrenheit': round(K, 2)
+                'Fahrenheit': round(F, 2)
             }
